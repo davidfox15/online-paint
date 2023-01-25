@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+.toolbar {
+  height: $toolbar-height;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: gap;
+  width: 100%;
+  width: 100%;
+  box-shadow: 0 4px 5px gray;
+  gap: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  &__btn {
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.brush {
+  background: url('../assets/img/brush.png') no-repeat center center;
+}
+
+.circle {
+  background: url('../assets/img/circle.png') no-repeat center center;
+}
+
+.eraser {
+  background: url('../assets/img/eraser.png') no-repeat center center;
+}
+
+.close {
+  background: url('../assets/img/close.svg') no-repeat center center;
+}
+
+.line {
+  background: url('../assets/img/line.png') no-repeat center center;
+}
+
+.rect {
+  background: url('../assets/img/rect.png') no-repeat center center;
+}
+
+.redo {
+  background: url('../assets/img/redo.png') no-repeat center center;
+}
+
+.undo {
+  margin-left: auto;
+  background: url('../assets/img/undo.png') no-repeat center center;
+}
+
+.save {
+  background: url('../assets/img/save.png') no-repeat center center;
+}
