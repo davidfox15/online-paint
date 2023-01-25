@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Rect from '../tools/Rect'
 import canvasState from '../store/canvasState'
 import toolState from '../store/toolState'
@@ -41,7 +41,14 @@ const Toolbar = () => {
           toolState.setTool(new Line(canvasState.canvas))
         }}
       />
-      <input type="color" className="toolbar__btn" />
+      <input
+        type="color"
+        className="toolbar__btn"
+        onChange={e => {
+          toolState.setFillColor(e.target.value)
+          toolState.setStrokeColor(e.target.value)
+        }}
+      />
       <button className="toolbar__btn undo" />
       <button className="toolbar__btn redo" />
       <button className="toolbar__btn save" />
