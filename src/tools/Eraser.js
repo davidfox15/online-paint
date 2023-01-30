@@ -1,15 +1,18 @@
-import Tool from './Tool'
 import Brush from './Brush'
 
 export default class Eraser extends Brush {
   constructor(canvas) {
     super(canvas)
-    this.listen()
+    this.color = this.ctx.strokeStyle
   }
 
-  listen() {
-    super.listen()
-    this.ctx.lineWidth = 10
+  mouseUpHandle(e) {
+    super.mouseUpHandle(e)
+    this.ctx.strokeStyle = this.color
+  }
+
+  mouseDownHandle(e) {
+    super.mouseDownHandle(e)
     this.ctx.strokeStyle = '#FFFFFF'
   }
 }
