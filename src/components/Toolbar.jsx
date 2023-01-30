@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Rect from '../tools/Rect'
 import canvasState from '../store/canvasState'
 import toolState from '../store/toolState'
@@ -49,8 +49,14 @@ const Toolbar = () => {
           toolState.setStrokeColor(e.target.value)
         }}
       />
-      <button className="toolbar__btn undo" />
-      <button className="toolbar__btn redo" />
+      <button
+        className="toolbar__btn undo"
+        onClick={() => canvasState.undo()}
+      />
+      <button
+        className="toolbar__btn redo"
+        onClick={() => canvasState.redo()}
+      />
       <button className="toolbar__btn save" />
     </div>
   )
