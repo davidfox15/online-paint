@@ -39,7 +39,6 @@ export default class Circle extends Tool {
   }
 
   draw(x, y, rad) {
-    console.log(x, y, rad)
     const img = new Image()
     img.src = this.saved
     img.onload = () => {

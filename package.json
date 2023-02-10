@@ -13,10 +13,14 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "ttab": "^0.8.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cd server; npm run dev & ttab -w 'cd ..; npm run dev'",
+    "server:install": "git clone git@github.com:davidfox15/online-paint-server.git server",
+    "update": "npm install; cd server; npm install; cd ..",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
